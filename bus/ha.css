@@ -1,0 +1,249 @@
+:root {
+    --bg-color: #f4f7f6;
+    --text-color: #333;
+    --card-bg: #ffffff;
+    --nav-bg: #1a252c;
+    --primary-color: #04AA6D;
+    --primary-hover: #038a59;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Typography & Animation */
+.cursor {
+    font-weight: bold;
+    color: var(--primary-color);
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+#typing-text {
+    color: #1a252c;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+#typeanimtext {
+    text-align: center;
+    margin-top: 10vh;
+    margin-bottom: 20px;
+}
+
+/* Navbar */
+nav {
+    background-color: var(--nav-bg);
+    padding: 15px 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+nav ul.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover, nav a.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Layout Containers */
+.login-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.search-container {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.search-bar-container h1 {
+    margin-bottom: 15px;
+    color: #1a252c;
+}
+
+#search {
+    width: 350px;
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    outline: none;
+    font-size: 16px;
+}
+
+#suggestions {
+    border-radius: 8px;
+    width: 350px;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 10px;
+    padding: 0;
+    list-style: none;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#suggestions li {
+    padding: 12px 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+#suggestions li:hover {
+    background-color: #f1f1f1;
+    color: var(--primary-color);
+}
+
+/* Map - Centered and Contained */
+#map {
+    width: 80%;
+    max-width: 1000px;
+    height: 500px;
+    margin: 0 auto 50px auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+/* Form & Buttons */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0 20px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: var(--primary-hover);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.cancelbtn {
+    width: auto;
+    background-color: #f44336;
+}
+
+.cancelbtn:hover {
+    background-color: #d32f2f;
+}
+
+/* Modal Setup */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 120px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.container {
+    padding: 20px 30px;
+}
+
+.footer-container {
+    background-color: #f9f9f9;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0 0 12px 12px;
+}
+
+span.psw {
+    padding-top: 0;
+}
+
+/* Modal Background */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 100; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.6); 
+    padding-top: 60px;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: var(--card-bg);
+    margin: 0 auto; 
+    border-radius: 12px;
+    border: none;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    color: #888;
+    font-size: 30px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.close:hover,
+.close:focus {
+    color: #f44336;
+    cursor: pointer;
+}
+
+.animate {
+    animation: animatezoom 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0.7); opacity: 0;} 
+    to {transform: scale(1); opacity: 1;}
+}
