@@ -3,39 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bus Tracker - Map</title>
     <link rel="stylesheet" href="ha.css">
 </head>
 <body>
 
     <nav> 
-        <ul>
-
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="map.html" class="active">The Map</a></li>
             <li><a href="index.html">Login</a></li>
-
         </ul>
     </nav>
 
     <div class="search-container">
         <div class="search-bar-container">
-            <h2>search bar</h2>
+            <h1>Find Your Bus</h1>
+            <!-- Fixed lowercase 'search' to match your sigma.js file -->
             <input type="text" id="search" placeholder="Where are you going...">
         </div>
         
         <ul id="suggestions"></ul>
     </div>
 
-
     <div id="map"></div>
  
-
- 
-<script
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBViokQUgSKycZWhYUJC741CvwTaTR6nHo&callback=initMap"
-  async
-  defer>
-</script>
-
-<script  src = "sigma.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBViokQUgSKycZWhYUJC741CvwTaTR6nHo&callback=initMap"
+      async
+      defer>
+    </script>
+    <script src="sigma.js"></script>
 
 </body>
+</html>
